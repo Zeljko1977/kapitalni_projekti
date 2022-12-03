@@ -1,0 +1,28 @@
+.projekti {
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 100rem;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  .projekti ul {
+    list-style: none;
+    padding: 1rem;
+  }
+  
+  .projekti li {
+    border: 1px solid #ccc;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .projekti li div {
+    text-transform: capitalize;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  h1 {
+    font-family: 'Nunito Sans', sans-serif;
+  }
