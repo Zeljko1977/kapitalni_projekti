@@ -12,23 +12,23 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(() => {
-    console.log('EFFECT RUNNING');
+    
 
     return () => {
-      console.log('EFFECT CLEANUP');
+  
     };
   }, [enteredPassword]);
 
   useEffect(() => {
     const identifier = setTimeout(() => {
-      console.log("timeout se okino");
+    
       setFormIsValid(
         enteredEmail.includes('@') && enteredPassword.trim().length > 6
       );
     }, 500);
 
     return () => {
-      console.log('CISCENJE');
+      
       clearTimeout(identifier);
     };
   }, [enteredEmail, enteredPassword]);

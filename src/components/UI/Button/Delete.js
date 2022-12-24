@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import classes from'./Delete.module.css';
 
+const Delete = () => {
+    return (
+      <>
+      <div>
+        <br />
+        
+          <button className="delete" >Delete</button>
+      
+      </div>
+      </>
+    );
+  }
 
-export default function DeleteButton() {
-  const [visible, setVisible] = useState(true);
+export default Delete
 
-  const removeElement = () => {
-    setVisible((prev) => !prev);
-  };
-
-  return (
-    <>
-    <div>
-      <br />
-      {visible && (
-        <button onClick={removeElement}>Delete</button>
-      )}
-    </div>
-    </>
-  );
-}
+ 

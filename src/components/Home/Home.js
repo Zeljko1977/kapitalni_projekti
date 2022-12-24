@@ -4,12 +4,14 @@ import Button from '../UI/Button/Button';
 import ErrorModal from './ErrorModal';
 import Valute from './Valute';
 
+
 const Input = (props) => {
     const [enteredNaziv, setEnteredNaziv] = useState("");
     const [enteredBudzet, setEnteredBudzet] = useState("");
     const [enteredOpis, setEnteredOpis] = useState("");
     const [enteredCilj, setEnteredCilj] = useState("");
     const [error, setError] = useState();
+   
 
     
     const addProjectHandler = async (event) => {
@@ -29,7 +31,7 @@ const Input = (props) => {
         });
         return;
     }
-  
+  //
       console.log(enteredNaziv, enteredBudzet, enteredOpis, enteredCilj);
       const response = await fetch('https://undo-d00b3-default-rtdb.europe-west1.firebasedatabase.app/projekti.json', {
       method: 'POST',
@@ -64,6 +66,8 @@ const Input = (props) => {
       setError(null);
   };
   
+
+  
     return (
       <>
       <h1>Input polja</h1>
@@ -83,6 +87,7 @@ const Input = (props) => {
   <label htmlFor="msg"><span>Cilj projekta</span></label>
 
   <Button className='button , input' type='submit'>Dodajte projekat</Button>
+  
   
 </form>
 </div>

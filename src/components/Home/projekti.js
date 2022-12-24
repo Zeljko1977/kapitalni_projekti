@@ -1,9 +1,9 @@
 import React from "react";
 import Card from '../UI/Card/Card'
 import classes from './projekti.module.css';
-import DeleteButton from "../UI/Button/Delete";
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set, remove } from "firebase/database";
+import { getDatabase, ref, remove } from "firebase/database";
+
 
 
 const firebaseConfig = {
@@ -28,8 +28,6 @@ const deleteHandler = (key) => {
     
     // The write failed...
   });
-
-
 }
 
 const Projekti = (props) => {
@@ -45,8 +43,10 @@ const Projekti = (props) => {
             <div>Opis projekta: </div>{projekt.opis}
             <div>Cilj projekta: </div>{projekt.cilj}
             <button onClick={()=>deleteHandler(projekt.key)}>delete</button>
+           
         </li>
       ))}
+      
     </ul>
     
     </Card>
