@@ -5,10 +5,11 @@ const Card = (props) => {
   return (
     <div>
       {" "}
-      <div className={`${classes.card} ${props.className}`}>
+      <li className={classes.item}>
+      <div className={`${props.className}`}>
         {props.children}
       </div>
-     
+      </li>
     </div>
   );
 };

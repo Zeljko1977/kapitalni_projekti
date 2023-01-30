@@ -1,9 +1,10 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { Route, Switch} from "react-router-dom";
+import React, { Fragment, useEffect, useState} from "react";
+import { Route, Switch,  Redirect} from "react-router-dom";
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
 import MainHeader from "./components/MainHeader/MainHeader";
 import Projekti from "./components/Home/projekti";
+import Projekat from "./components/Home/Projekat";
 
 function App() {
   const [mojiProjekti, setMojiProjekti] = useState([]);
@@ -90,11 +91,17 @@ function App() {
         )}
 
         {isLoggedIn && (
-          <Route path="/projekti">
+          <Route path="/projekti" exact>
             <Projekti projekti={mojiProjekti} onLogout={logoutHandler} />
           </Route>
         )}
+        <Route path='/' exact>
+        <Redirect to='/login' />
+      </Route>
 
+      <Route path='/projekti/:id' exact>
+            <Projekat />
+          </Route>
       </Switch>
     </Fragment>
   );

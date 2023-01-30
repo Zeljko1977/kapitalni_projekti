@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import classes from './Navigation.module.css';
 
@@ -8,12 +9,12 @@ const Navigation = (props) => {
       <ul>
         {props.isLoggedIn && (
           <li>
-            <a href="/projekti"><button>Projekti</button></a>
+            <NavLink to="/projekti"><button>Projekti</button></NavLink>
           </li>
         )}
         {props.isLoggedIn && (
           <li>
-            <a href="/dodajprojekat"><button>Dodaj Projekat</button></a>
+            <NavLink to="/dodajprojekat"><button>Dodaj Projekat</button></NavLink>
           </li>
         )}
         {props.isLoggedIn && (
